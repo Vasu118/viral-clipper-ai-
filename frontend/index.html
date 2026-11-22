@@ -1,10 +1,24 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Viral Clipper AI</title>
-</head>
-<body>
-  <h1>Viral Clipper AI</h1>
-  <p>Welcome to Viral Clipper AI</p>
-</body>
-</html>
+<!doctype html>
+<html lang="gu"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#101323"><link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="styles.css"><title>Viral Clipper AI</title></head>
+<body><main class="shell">
+<header><div class="logo">VC</div><div><h1>Viral Clipper <span>AI</span></h1><p>Long videos → Shorts & Reels</p></div></header>
+<section class="hero"><small>AI VIDEO WORKSPACE</small><h2>તમારા લાંબા વીડિયોમાંથી<br>Shorts બનાવો</h2><p>તમારો વીડિયો અપલોડ કરો, AI ક્લિપ્સ પસંદ કરશે અને captions ઉમેરશે.</p></section>
+<section class="panel">
+<h3>1. વીડિયો પસંદ કરો</h3>
+<label>YouTube લિંક (માલિકીની/અધિકૃત ઍક્સેસવાળી)</label>
+<input id="url" type="url" placeholder="https://www.youtube.com/watch?v=...">
+<p class="hint">નોંધ: માત્ર જાહેર લિંકથી વીડિયો ડાઉનલોડ થઈ શકતો નથી. આ ડેમોમાં YouTube લિંક ચકાસાય છે; પ્રોસેસિંગ માટે અધિકૃત વીડિયો ફાઇલ અપલોડ કરો.</p>
+<div class="or">અથવા અપલોડ કરો</div>
+<input id="file" type="file" accept="video/*">
+</section>
+<section class="panel">
+<h3>2. ક્લિપ સેટિંગ્સ</h3>
+<label>Captions ભાષા</label><select id="lang"><option value="both">Hindi + English</option><option value="hi">Hindi</option><option value="en">English</option></select>
+<label>કેટલી ક્લિપ્સ?</label><select id="count"><option>3</option><option selected>5</option><option>10</option></select>
+<label>દરેક ક્લિપની મહત્તમ લંબાઈ</label><select id="duration"><option value="30">30 સેકન્ડ</option><option value="45" selected>45 સેકન્ડ</option><option value="60">60 સેકન્ડ</option></select>
+<button id="go">AI Shorts બનાવો ✨</button><p id="status" role="status">તમારો વીડિયો અપલોડ કર્યા પછી Generate દબાવો.</p>
+<div id="progress" class="progress hidden"><div id="bar"></div></div><div id="results"></div>
+</section><footer>Viral Clipper AI · Mobile edition</footer></main><script src="app.js"></script></body></html>
