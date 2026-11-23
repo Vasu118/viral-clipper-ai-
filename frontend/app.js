@@ -1,5 +1,5 @@
 const $=id=>document.getElementById(id);
-const API=localStorage.getItem('vc_api')||''; // Set this to your deployed HTTPS backend URL.
+const API=(localStorage.getItem('vc_api')||window.location.origin).replace(/\/$/,''); // Set this to your deployed HTTPS backend URL.
 function validYT(s){try{let u=new URL(s);return ['youtube.com','www.youtube.com','m.youtube.com','youtu.be'].includes(u.hostname)}catch{return false}}
 $('go').onclick=async()=>{
  const f=$('file').files[0],u=$('url').value.trim();
