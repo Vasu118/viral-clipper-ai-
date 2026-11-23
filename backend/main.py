@@ -26,7 +26,7 @@ def get_duration(path):
 
 def transcribe(path):
     from faster_whisper import WhisperModel
-    model=WhisperModel(os.getenv("WHISPER_MODEL","small"),device=os.getenv("WHISPER_DEVICE","cpu"),compute_type=os.getenv("WHISPER_COMPUTE_TYPE","int8"))
+    model=WhisperModel(os.getenv("WHISPER_MODEL","tiny"),device=os.getenv("WHISPER_DEVICE","cpu"),compute_type=os.getenv("WHISPER_COMPUTE_TYPE","int8"))
     segments,info=model.transcribe(str(path),vad_filter=True,word_timestamps=False)
     return [{"start":float(s.start),"end":float(s.end),"text":s.text.strip()} for s in segments if s.text.strip()], info.language
 
